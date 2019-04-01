@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pop!_OS APT Repositories</title>
+
+    <meta itemprop="name" content="Pop!_OS APT Repositories" />
+    <meta name="twitter:title" content="Pop!_OS APT Repositories" />
+    <meta property="og:title" content="Pop!_OS APT Repositories" />
+
+    <meta name="description" content="Pop!_OS APT Repositories information" />
+    <meta itemprop="description" content="Pop!_OS APT Repositories information" />
+    <meta name="twitter:description" content="Pop!_OS APT Repositories information" />
+    <meta property="og:description" content="Pop!_OS APT Repositories information" />
+
+    <meta name="theme-color" content="#070d2f" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta itemprop="url" content="http://apt.pop-os.org/" />
+    <meta itemprop="logo" content="icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://apt.pop-os.org/" />
+    <meta property="fb:app_id" content="346948125501334" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@system76" />
+    <meta name="twitter:creator" content="@system76" />
+
+    <meta name="pinterest" content="nopin" />
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" sizes="196x196" href="icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="196x196" href="icon.png" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="index.css">
+  </head>
+  <body>
+    <div id="hero">
+      <img src="https://system76.com/assets/pop/os-logo_640.png" alt="Pop!_OS Logo" />
+
+      <div class="actions">
+        <a class="button" href="https://system76.com/pop">
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <h1>APT Repository Information</h1>
+
+      <section>
+        <p>
+          These repositories are preinstalled on Pop!_OS. Most of these repositories
+          are signed with the Pop!_OS ISO key, which can be added with the following
+          command:
+        </p>
+
+        <pre><code>apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63C46DF0140D738961429F4E204DD8AEC33A7AFF</code></pre>
+      </section>
+
+      <section>
+        <h2>
+          <a href="proprietary">proprietary</a>
+        </h2>
+
+        <p>
+          This repository contains a number of applications not packaged by
+          Ubuntu, or that are out of date on Ubuntu.
+        </p>
+
+        <p>
+          To add this repository, run the following command:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/proprietary $(lsb_release -cs) main"</code></pre>
+      </section>
+
+      <section>
+        <h2>
+          <a href="staging">staging</a>
+        </h2>
+
+        <p>
+          These repositories provides development versions of Pop!_OS packages. To
+          add a repository, run the following command, where <i>master</i> is the
+          name of your desired branch:
+        </p>
+
+        <pre><code>add-apt-repository "deb [arch=amd64] http://apt.pop-os.org/staging/master $(lsb_release -cs) main"</code></pre>
+      </section>
+
+      <section>
+        <h2>
+          <a href="staging-ubuntu">staging-ubuntu</a>
+        </h2>
+
+        <p>
+          These repositories provides development versions of Ubuntu packages. To
+          add a repository, run the following command, where <i>master</i> is the
+          name of your desired branch:
+        </p>
+
+        <pre><code>add-apt-repository "deb [arch=amd64] http://apt.pop-os.org/staging-ubuntu/master $(lsb_release -cs) main"</code></pre>
+      </section>
+
+      <section>
+        <h2>
+          <a href="ubuntu">ubuntu</a>
+        </h2>
+
+        <p>
+          This repository is a mirror of the Ubuntu archive for bionic, cosmic,
+          and disco, including the main, multiverse, restricted, and universe
+          components. To add this repository, run the following command:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs) main multiverse restricted universe"</code></pre>
+
+        <p>
+          The security update repository should also be added:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-security main multiverse restricted universe"</code></pre>
+
+        <p>
+          The regular updates repository should be added unless you want to prevent updates that are not related to security:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-updates main multiverse restricted universe"</code></pre>
+
+        <p>
+          Backports can be added for more package updates:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-backports main multiverse restricted universe"</code></pre>
+
+        <p>
+          Proposed is not recommended, it contains pre-release updates:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-proposed main multiverse restricted universe"</code></pre>
+      </section>
+    </main>
+  </body>
+</html>

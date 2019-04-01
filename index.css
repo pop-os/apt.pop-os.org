@@ -1,0 +1,131 @@
+html,
+body {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #070d2f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+section:not(:last-of-type) {
+  border-bottom: 1px solid #000209;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: "System76 Fira Sans", "Fira Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.175em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "System76 Roboto Slab", "Roboto Slab", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+pre code {
+  background: #333;
+  border-color: #000;
+  border-radius: 0.375rem;
+  display: block;
+  font-family: "System76 Fira Mono", "Fira Mono", "Roboto Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  margin: 0.5em auto;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+#hero {
+  background-color: #fff;
+  color: #574e4a;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.button {
+  background-color: transparent;
+  border-radius: 0.25em;
+  border: 0.125em solid #574e4a;
+  color: inherit;
+  display: inline-block;
+  font-family: "System76 Roboto Slab","Roboto Slab",serif;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 0.5em 0.75em;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    color 250ms ease,
+    text-shadow 250ms ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #faa41a;
+  color: #fff;
+}
+
+main {
+  margin: 2rem auto;
+  max-width: 120ch;
+  padding: 0 2rem;
+}
+
+@media only screen and (min-width: 769px) {
+  html {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  h1 {
+    font-size: 2.125rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
