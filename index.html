@@ -141,6 +141,43 @@
         <pre><code>add-apt-repository "deb [arch=amd64] http://apt.pop-os.org/staging-ubuntu/master $(lsb_release -cs) main"</code></pre>
       </section>
 
+      <section>
+        <h2>
+          <a href="ubuntu">ubuntu</a>
+        </h2>
+
+        <p>
+          This repository is a mirror of the Ubuntu archive for bionic, cosmic,
+          and disco, including the main, multiverse, restricted, and universe
+          components. To add this repository, run the following command:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs) main multiverse restricted universe"</code></pre>
+
+        <p>
+          The security update repository should also be added:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-security main multiverse restricted universe"</code></pre>
+
+        <p>
+          The regular updates repository should be added unless you want to prevent updates that are not related to security:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-updates main multiverse restricted universe"</code></pre>
+
+        <p>
+          Backports can be added for more package updates:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-backports main multiverse restricted universe"</code></pre>
+
+        <p>
+          Proposed is not recommended, it contains pre-release updates:
+        </p>
+
+        <pre><code>add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-proposed main multiverse restricted universe"</code></pre>
+      </section>
     </main>
   </body>
 </html>
