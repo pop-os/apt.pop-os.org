@@ -57,10 +57,11 @@
         <p>
           These repositories are preinstalled on Pop!_OS. Most of these repositories
           are signed with the Pop!_OS ISO key, which can be added with the following
-          command:
+          commands:
         </p>
 
-        <pre><code>apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63C46DF0140D738961429F4E204DD8AEC33A7AFF</code></pre>
+        <pre><code>gpg --no-default-keyring --keyring /tmp/keyring.gpg --keyserver keyserver.ubuntu.com --recv-key 63C46DF0140D738961429F4E204DD8AEC33A7AFF
+gpg --no-default-keyring --keyring /tmp/keyring.gpg --output /usr/share/keyrings/pop-archive-keyring.gpg --export</code></pre>
       </section>
 
       <section>
